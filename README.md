@@ -8,7 +8,5 @@
 
 ### 2 - "Codando" 💻
 #### Para começarmos, suponho que você tenha um conhecimento básico em NODE.JS. <br> Se sim, então borá criar um exemplo prático, bom primeiro vamos criar nosso servidor NODE começando com o primeiro comando. 
-##### 1°
-`npm init -y `
-##### 2°
-`npm install --save`
+##### 1° - `npm init -y `
+##### 2° - `npm install --save`
