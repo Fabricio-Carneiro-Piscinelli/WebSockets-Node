@@ -66,7 +66,7 @@ server.listen(3000, () => {
 ```
 
 ### 3 - Explicando alguns passos 🚶‍
-##### No passo 8° criamos nosso servidor node com algumas dependencias. Dentro do nosso code *servidor.js* temos a funcao :
+##### No passo 5° criamos nosso servidor node com algumas dependencias. Dentro do nosso code *servidor.js* temos a funcao :
 ```
 io.on('connection', srv => {
   /* */
@@ -80,7 +80,7 @@ srv.on('ENVIA-MSG', data => {
 ```
 ##### ja essa tem a finalidade de ouvir as chamadas externas, que é dentro de uma das paginas *cliente.html* ex.:  `socket.emit('ENVIA-MSG', msg);` . 
 
-##### No passo 9° temos as paginas *cliente.html* & *cliente2.html* no qual enviará mensagens e recebera as msg's,
+##### No passo 7° temos as paginas *cliente.html* & *cliente2.html* no qual enviará mensagens e recebera as msg's,
 ###### *Enviando* ✈️
   ```
 socket.on( 'RECEBE-MSG' , msg  => {
