@@ -89,7 +89,7 @@ socket.on( 'RECEBE-MSG' , msg  => {
     
    ```
    
-###### *Recebando* ☄️
+###### *Recebendo* ☄️
   ```
 socket.on( 'RECEBE-MSG' , msg  => {
     ImprimeMsg ( msg );
