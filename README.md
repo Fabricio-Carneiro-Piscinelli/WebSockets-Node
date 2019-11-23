@@ -16,7 +16,7 @@
   ``` 
 const server = require('http').createServer();
 const io = require('socket.io')(server);
-io.on('connection', srv => {
+ io.on('connection', srv => {
   srv.on('ENVIA-MSG', data => {  
     srv.broadcast.emit('RECEBE-MSG', data);
   });
@@ -24,8 +24,9 @@ io.on('connection', srv => {
 server.listen(3000, () => {
   console.log("Servidor online.");
 });
-  ```
-##### Passo 6° Criando nossos paginas cliente1.html e cliente2.html, o código para as duas é o mesmo, então vou inserir somente um.
+  ``` 
+##### Passo 6° Rodando o comando `node servidor` 
+##### Passo 7° Criando nossos paginas cliente1.html e cliente2.html, o código para as duas é o mesmo, então vou inserir somente um.
 ``` 
 <!DOCTYPE html>
  <html>
@@ -65,7 +66,7 @@ server.listen(3000, () => {
 ```
 
 ### 3 - Explicando alguns passos 🚶‍
-##### No passo 5° criamos nosso servidor node com algumas dependencias. Dentro do nosso code *servidor.js* temos a funcao :
+##### No passo 8° criamos nosso servidor node com algumas dependencias. Dentro do nosso code *servidor.js* temos a funcao :
 ```
 io.on('connection', srv => {
   /* */
@@ -79,7 +80,7 @@ srv.on('ENVIA-MSG', data => {
 ```
 ##### ja essa tem a finalidade de ouvir as chamadas externas, que é dentro de uma das paginas *cliente.html* ex.:  `socket.emit('ENVIA-MSG', msg);` . 
 
-##### No passo 6° temos as paginas *cliente.html* & *cliente2.html* no qual enviará mensagens e recebera as msg's,
+##### No passo 9° temos as paginas *cliente.html* & *cliente2.html* no qual enviará mensagens e recebera as msg's,
 ###### *Enviando* ✈️
   ```
 socket.on( 'RECEBE-MSG' , msg  => {
@@ -95,5 +96,5 @@ socket.on( 'RECEBE-MSG' , msg  => {
 })
     
    ```
-   ##### Sendo assim, a troca de dados será feita em tempo real. viu como é simples. tks..
+   ##### Sendo assim, ao digitar ao no campo input e der enviar a troca de dados será feita em tempo real. viu como é simples. tks..
    ### Logicamente into foi um exemplo bemmm, mais bemmmm básico, mais o princípio da complexidade esta na simplicidade, então parte dai.
