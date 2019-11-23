@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Cliente 1 Socket </title>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+	</head>
+	<body>
+
+		<div>
+			<div id="recebe-msg"> </div>	
+			<input type="text" placeholder="Digite uma mensagem...">
+			<button type="button">Enviar</button>
+		</div>	
+
+		<script>
+			let socket = io.connect("http://localhost:3000");
+			
+			$("button").click( () => {
+				let msg = $('input').val();
+				socket.emit('ENVIA-MSG', msg);
+				ImprimeMsg ( msg );
+			})
+
+			socket.on( 'RECEBE-MSG' , msg  => {
+				ImprimeMsg ( msg );
+			})
+
+			function ImprimeMsg ( msg )
+			{
+				$('#recebe-msg').html(`<h1> ${msg} <h1><br>`);
+			}
+
+		</script>
+	</body>
+</html>
