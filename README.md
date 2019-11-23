@@ -88,10 +88,12 @@ socket.on( 'RECEBE-MSG' , msg  => {
     
    ```
    
-###### *Recebando* ✈️
+###### *Recebando* ☄️
   ```
 socket.on( 'RECEBE-MSG' , msg  => {
     ImprimeMsg ( msg );
 })
     
    ```
+   ##### Sendo assim, a troca de dados será feita em tempo real. viu como é simples. tks..
+   ### Logicamente into foi um exemplo bemmm, mais bemmmm básico, mais o princípio da complexidade esta na simplicidade, então parte dai.
